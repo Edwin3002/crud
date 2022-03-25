@@ -1,0 +1,24 @@
+.navbar{
+
+    background-color: #bffff0;
+}
+nav{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.p{
+    margin-right: 50px;
+    font-size: 150%;
+    font-weight: bold;
+}
+.link{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 10px;
+    text-align: center;
+    color: black;
+}
+.link:hover{
+    color: gray;
+}
