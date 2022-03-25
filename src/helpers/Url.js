@@ -1,1 +1,1 @@
-export let urlFiguras = 'https://figuras-edwin.herokuapp.com/figuras';
+export let urlFiguras = 'https://figuras-edwin.herokuapp.com/figuras/';

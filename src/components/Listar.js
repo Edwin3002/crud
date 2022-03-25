@@ -23,13 +23,24 @@ export const Listar = () => {
         getData()
     }, []);
 
+    //borrar
+    const deleteData = (id) => {
+        axios.delete(urlFiguras + id)
+            .then(response => {
+                getData()
+                console.log(response);
+            }).catch(error => {
+                console.log(error);
+            })
+    }
+
     return (
         <div className='bg'>
             <h1 className=' titulo'>Figuras</h1>
             <div className='container'>
                 {
                     figuras.map(f => {
-                        let { nombre, img, categoria, precio, resumen, id } = f
+                        let { nombre, img, precio, resumen, id } = f
                         return (
                             <Card key={id} className="carta" style={{ width: '15rem' }} >
                                 <h2 className='nombre'>{nombre}</h2>
@@ -39,8 +50,8 @@ export const Listar = () => {
                                 </div>
                                 <Card.Body>
                                     <p className='precio'>
-                                       Price: {precio}$ 
-                                    <Button className='categoria' variant="danger">{categoria}</Button>
+                                        Price: {precio}$
+                                        <Button className='categoria' variant="danger" onClick={() => deleteData(id)}>Delete</Button>
                                     </p>
                                     <Card.Text className='resumen'>
                                         {resumen}

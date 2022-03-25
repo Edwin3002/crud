@@ -1,7 +1,7 @@
 export const fileUpload = async (file) => {
     const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/edwin3002/upload'
     const formData = new FormData()
-    formData.append('upload_preset', 'Students')
+    formData.append('upload_preset', 'figuras')
     formData.append('file', file)
 
     const resp = await fetch(cloudinaryUrl, {
